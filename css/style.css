@@ -36,6 +36,18 @@
     height:43px;
 }
 
+/*Menu mobile*/
+.toggle{
+    width:100%;
+    background-color: #333;
+    color:#fff;
+    text-align:right;
+    font-size:1.5rem;
+    display:none;
+}
+
+/***************/
+
 .head-nav {
     grid-area: head-nav ;
 }
@@ -136,10 +148,39 @@
 
 @media(max-width:360px){
 
-    .container {
-        width: 100%;
-       
+    .header-wrapper{
+        background-color:none; ;
+        height: 0px;
     }
+
+    .container { 
+        width: 100%;
+    }
+
+    .header {
+        grid-template-columns:1fr;
+        grid-template-areas:
+        'head-nav'
+        'logo'
+        'user-login';
+       }
+    /*Mobile*/
+    .toggle{
+        display:block;
+        padding: 0.5rem;
+    }
+
+ 
+    .head-nav ul {
+        display:none;
+        background: #4c4c4c;
+    }
+
+   
+    .activatemenu{
+        display:block!important;
+    }
+    /**/
 
     
     

@@ -5,8 +5,11 @@
         My Ecommerce Gridcss
     </title>
     <meta name="viewport" content="width=device-width initial-scale-1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="css/style.css"/>
+  
     <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,500i,700,700i,900&display=swap" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 </head>
 <body>
     <div class="header-wrapper">
@@ -16,7 +19,12 @@
                     <img src="img/logo.png" alt="logo"/>
                 </div>
 
-                <div class="head-nav">
+                <div class="head-nav" id="myTopnav">
+                        <!--Menu Mobile-->
+                         <div class="toggle">
+                                <i class="fa fa-bars menu" aria-hidden="true"></i>
+                         </div>
+                          <!--Menu Large-->
                         <ul>
                             <li><a href="#">Marques</a></li>
                             <li><a href="#">Montre</a></li>
@@ -52,6 +60,17 @@
  
         </div>
     </div>
+
+    <!--Js-->
+    <script>
+     $(document).ready(function(){
+       $('.menu').click(function(){
+            $('ul').toggleClass('activatemenu');
+       });
+     });
+    </script>
+
+
 </body>
 
 </html>
