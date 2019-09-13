@@ -13,53 +13,97 @@
 </head>
 <body>
     <div class="header-wrapper">
-        <div class="container">
-            <div class="header">
-                <div class="logo">
-                    <img src="img/logo.png" alt="logo"/>
-                </div>
-
-                <div class="head-nav" id="myTopnav">
-                        <!--Menu Mobile-->
-                         <div class="toggle">
-                                <i class="fa fa-bars menu" aria-hidden="true"></i>
-                         </div>
-                          <!--Menu Large-->
-                        <ul>
-                            <li><a href="#">Marques</a></li>
-                            <li><a href="#">Montre</a></li>
-                            <li><a href="#">Lux</a></li>
-                            <li><a href="#">Bijoux</a></li>
-                            <li><a href="#">Bon plans</a></li>
-                        </ul>
-                </div>
-        
-                <div class="user-login">
-
-                   <div class="langage">
-                       <p><a href="#">FR</a></p>
-                        <p><a href="#">/EN</a></p>
-                   </div>
-
-                   <div class="carte">
-                       <a href="#" ><img src="img/carte1.png"/></a>
-                   </div>
-
-                   
-                   <div class="register">
-                        <a href="#"><img src="img/iconplay.png"/></a>
-                    </div>
-
-
-
-
-                </div>
-        
-            </div>  
+        <div class="global-container">
+                <div class="container">
+                        <div class="header">
+                            <div class="logo">
+                                <a href="index.html"><img src="img/logo.png" alt="logo"/></a>
+                            </div>
             
- 
+                            <div class="head-nav" id="myTopnav">
+                                    <!--Menu Mobile-->
+                                     <div class="toggle">
+                                            <i class="fa fa-bars menu" aria-hidden="true"></i>
+                                     </div>
+                                      <!--Menu Large-->
+                                    <ul>
+                                        <li><a href="#">Marques</a></li>
+                                        <li><a href="#">Montre</a></li>
+                                        <li><a href="#">Lux</a></li>
+                                        <li><a href="#">Bijoux</a></li>
+                                        <li><a href="#">Bon plans</a></li>
+                                    </ul>
+                            </div>
+                    
+                            <div class="user-login">
+            
+                               <div class="langage">
+                                   <p><a href="#">FR</a></p>
+                                    <p><a href="#">/EN</a></p>
+                               </div>
+            
+                               <div class="carte">
+                                   <a href="#" ><img src="img/carte1.png"/></a>
+                               </div>
+            
+                               
+                               <div class="register">
+                                    <a href="#"><img src="img/iconplay.png"/></a>
+                                </div>
+            
+            
+            
+            
+                            </div>
+                    
+                        </div>  
+                        
+             
+                </div>
         </div>
+        
     </div>
+    <!--Slider-->
+    <div class="global-container">
+            <div class="slideshow-container">
+                    <div class="container">
+                        <div class="mySlides fade ">
+                            <img src="img/visuel_slider_1.jpg" style="width:100%">
+                        </div>
+                        <div class="mySlides fade">
+                            <img src="img/visuel_slider_2.jpg" style="width:100%">
+                        </div>
+                        <br>
+                        <div style="text-align:center">
+                        <span class="dot"></span> 
+                        <span class="dot"></span> 
+                        <span class="dot"></span> 
+                        </div>
+                    </div><!--End slider--> 
+            
+                    <div class="box-ice">
+                        <div class="ice-watch">
+                            <div class="ice-inner">
+                                <h2>ICE WATCH</h2>
+                                <p>Mauris molestie, velit quis lobortis dictum, 
+                                    lacus nunc consequat nunc, ut lacinia nulla 
+                                    erat quis mqgnqliquam elementum.</p>
+                            </div>
+                     
+                        </div>
+                        <div class="price">
+                            <div class="price-inner">
+                                <p class="partirde"> a partir de </p>
+                                <p class="pricetag">89</p>
+                            </div>
+                            
+                        </div>
+                    </div>
+            </div> 
+    </div>
+    
+   
+    
 
     <!--Js-->
     <script>
@@ -68,6 +112,30 @@
             $('ul').toggleClass('activatemenu');
        });
      });
+
+       
+    //Slider
+    var slideIndex = 0;
+    showSlides();
+    function showSlides() {
+        var i;
+        var slides = document.getElementsByClassName("mySlides");
+        var dots = document.getElementsByClassName("dot");
+        for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";  
+        }
+        slideIndex++;
+        if (slideIndex > slides.length) {slideIndex = 1}    
+        for (i = 0; i < dots.length; i++) {
+            dots[i].className = dots[i].className.replace(" active", "");
+        }
+        slides[slideIndex-1].style.display = "block";  
+        dots[slideIndex-1].className += " active";
+        setTimeout(showSlides, 3000); // Change image
+    }
+
+
+
     </script>
 
 
